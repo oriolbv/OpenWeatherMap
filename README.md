@@ -19,7 +19,13 @@ For serve the app in the navigator
 
 # OpenWeatherMap
 
+## Ciutats
+
 > http://api.openweathermap.org/data/2.5/find?lat=41.68&lon=1.94&cnt=10&APPID=3da25caa87ab728585fd73a5d2ad6cb7
+
+## Info Ciutat (by Id)
+
+> http://api.openweathermap.org/data/2.5/weather?id=2172797
 
 Icon
 
