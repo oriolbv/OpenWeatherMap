@@ -1,6 +1,31 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, Ciutats) {
+    Ciutats.all().then(function(result) {
+        $scope.ciutats = result.data.list;  
+    });       
+
+
+//var a = Ciutats.all();
+//console.log(a[0]);
+/*     $http.get('http://api.openweathermap.org/data/2.5/find?lat=41.68&lon=1.94&cnt=10&APPID=3da25caa87ab728585fd73a5d2ad6cb7').then(function(resp) {
+     console.log('Success', resp);
+     $scope.ciutats = resp.data.list;
+   }, function(err) {
+     console.error('ERR', err);
+     // err.status will contain the status code
+   })*/
+    
+/*$scope.ciutats = [
+    {'name': 'Nexus S',
+     'snippet': 'Fast just got faster with Nexus S.'},
+    {'name': 'Motorola XOOM™ with Wi-Fi',
+     'snippet': 'The Next, Next Generation tablet.'},
+    {'name': 'MOTOROLA XOOM™',
+     'snippet': 'The Next, Next Generation tablet.'}
+  ];*/
+
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -10,16 +35,10 @@ angular.module('starter.controllers', [])
   //
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
-
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('ChatDetailCtrl', function($scope, $stateParams, Ciutats) {
+  $scope.chat = Ciutats.get($stateParams.idCiutat);
 })
 
 .controller('AccountCtrl', function($scope) {

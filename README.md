@@ -14,8 +14,12 @@ Open in Android Studio
 
 For serve the app in the navigator
 
-> $ ionic serve --lab
+> $ ionic serve --lab --livereload
 
+
+# OpenWeatherMap
+
+> http://api.openweathermap.org/data/2.5/find?lat=41.68&lon=1.94&cnt=10&APPID=3da25caa87ab728585fd73a5d2ad6cb7
 
 
 ## LINKS
