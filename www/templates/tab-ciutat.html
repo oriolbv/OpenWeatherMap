@@ -1,5 +1,16 @@
 <ion-view view-title="{{ciutat.name}}">
     <ion-content>
-        HOLA HOLA!
+        <br>
+
+        <div class="card">
+            <div class="item item-avatar">
+                <img ng-src="http://openweathermap.org/img/w/{{ciutat.weather[0].icon}}.png" id="weatherIcon" style="width: 64px; height: 64px">
+                <h2>{{ciutat.weather[0].main}}</h2>
+            </div>
+            <div class="item item-body">
+                {{ciutat.weather[0].description}}
+                <img class="full-image" src="http://www.joaoleitao.com/viagens/wp-content/uploads/2008/05/mapa-mundi.gif">
+            </div>
+        </div>
     </ion-content>
 </ion-view>
